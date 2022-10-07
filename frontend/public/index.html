@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+        <link
+            href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="http://49.232.101.156:8000/static/frontend/css/style.css"
+        />
+
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+    <body class="background-img-5">
+        <noscript>
+            <strong
+                >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
+                work properly without JavaScript enabled. Please enable it to
+                continue.</strong
+            >
+        </noscript>
+        <div id="app"></div>
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/ripple.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+        <div id="styleSelector" class="menu-styler">
+            <div class="style-toggler"><a href="#!"></a></div>
+            <div class="style-block">
+                <h4 class="mb-2">
+                    企业权限管理系统
+                    <small class="font-weight-normal">v4.0</small>
+                </h4>
+                <hr class="" />
+                <div
+                    class="m-style-scroller ps ps--active-y"
+                    style="height: calc(100vh - 335px); position: relative"
+                >
+                    <h6 class="mt-2">Layouts</h6>
+                    <div class="theme-color layout-type">
+                        <a
+                            href="#!"
+                            class=""
+                            data-value="menu-dark"
+                            title="Default Layout"
+                            ><span></span><span></span></a
+                        ><a
+                            href="#!"
+                            class="active"
+                            data-value="menu-light"
+                            title="Light"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="dark" title="Dark"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="reset" title="Reset"
+                            >Reset</a
+                        >
+                    </div>
+                    <h6>background color</h6>
+                    <div class="theme-color background-color flat">
+                        <a href="#!" class="active" data-value="background-blue"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-red"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-purple"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-info"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-green"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-dark"
+                            ><span></span><span></span
+                        ></a>
+                    </div>
+                    <h6>background Gradient</h6>
+                    <div class="theme-color background-color gradient">
+                        <a href="#!" class="" data-value="background-grd-blue"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-grd-red"
+                            ><span></span><span></span></a
+                        ><a
+                            href="#!"
+                            class=""
+                            data-value="background-grd-purple"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-grd-info"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-grd-green"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-grd-dark"
+                            ><span></span><span></span
+                        ></a>
+                    </div>
+                    <h6>background Image</h6>
+                    <div class="theme-color background-color image">
+                        <a href="#!" class="" data-value="background-img-1"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-img-2"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-img-3"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-img-4"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-img-5"
+                            ><span></span><span></span></a
+                        ><a href="#!" class="" data-value="background-img-6"
+                            ><span></span><span></span
+                        ></a>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="switch switch-primary d-inline m-r-10">
+                            <input type="checkbox" id="theme-rtl" /><label
+                                for="theme-rtl"
+                                class="cr"
+                            ></label>
+                        </div>
+                        <label>RTL</label>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="switch switch-primary d-inline m-r-10">
+                            <input
+                                type="checkbox"
+                                id="menu-fixed"
+                                checked=""
+                            /><label for="menu-fixed" class="cr"></label>
+                        </div>
+                        <label>Sidebar Fixed</label>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="switch switch-primary d-inline m-r-10">
+                            <input
+                                type="checkbox"
+                                id="header-fixed"
+                                checked=""
+                            /><label for="header-fixed" class="cr"></label>
+                        </div>
+                        <label>Header Fixed</label>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="switch switch-primary d-inline m-r-10">
+                            <input type="checkbox" id="box-layouts" /><label
+                                for="box-layouts"
+                                class="cr"
+                            ></label>
+                        </div>
+                        <label>Box Layouts</label>
+                    </div>
+                    <div class="form-group mb-2">
+                        <div class="switch switch-primary d-inline m-r-10">
+                            <input
+                                type="checkbox"
+                                id="breadcumb-layouts"
+                            /><label for="breadcumb-layouts" class="cr"></label>
+                        </div>
+                        <label>Breadcumb sticky</label>
+                    </div>
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px">
+                        <div
+                            class="ps__thumb-x"
+                            tabindex="0"
+                            style="left: 0px; width: 0px"
+                        ></div>
+                    </div>
+                    <div
+                        class="ps__rail-y"
+                        style="top: 0px; height: 536px; right: 0px"
+                    >
+                        <div
+                            class="ps__thumb-y"
+                            tabindex="0"
+                            style="top: 0px; height: 520px"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

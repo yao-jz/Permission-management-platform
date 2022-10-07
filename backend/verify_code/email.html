@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业通用权限平台邮箱验证</title>
+</head>
+<body style="margin: 0;text-align: center;padding: 0;">
+<div style="width: 80%;margin-left: 10%;">
+    <h1>企业通用权限平台邮箱验证</h1>
+    <p style="text-align: left;">
+        尊敬的用户：<br>
+        &emsp;&emsp;您好，您正在用此邮箱绑定您在企业通用权限平台的帐号，请单击以下按钮或输入下方验证码完成邮箱绑定：
+    </p>
+    <a href="{{verify_url}}">
+        <div style="width: 100%;margin-top: 10px;background: rgba(20, 20, 250, 0.9);
+            padding-bottom: 10px;padding-top: 10px;border-radius: 5px;text-align: center;font-size: 30px;
+            color: snow;">
+            点击此链接验证邮箱
+        </div>
+    </a>
+    <div style="margin-top: 20px;width: 100%;text-align: center;font-size: 30px;padding-top: 10px;
+        padding-bottom: 10px;background-color: rgba(250, 20, 20, 0.9);color: snow;border-radius: 5px;">
+        {{verify_code}}
+    </div>
+    <p style="margin-top: 10px;text-align: left;">
+        &emsp;&emsp;如果您未使用过企业通用权限平台或未进行过绑定邮箱的操作，请忽略本邮件。
+    </p>
+</div>
+</body>
+</html>

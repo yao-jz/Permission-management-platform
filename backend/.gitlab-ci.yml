@@ -1,0 +1,46 @@
+stages:
+  - lint
+  - test
+
+django-lint:
+  image: python:3.8.3
+  stage: lint
+
+  before_script:
+    - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r ./requirements.txt
+    - mv ./backend/settings_for_copy.py ./backend/settings.py
+  script:
+    - pylint application
+    - pylint application_token
+    - pylint application_auth
+    - pylint application_user
+    - pylint application_role
+    - pylint user_info
+    - pylint user_app_relation
+    - pylint user_role_relation
+    - pylint verify_code
+    - pylint user_message
+
+django-test:
+  image: python:3.8.3
+  stage: test
+
+  before_script:
+    - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r ./requirements.txt
+    - mv ./backend/settings_for_copy.py ./backend/settings.py
+    - mkdir static
+    - mkdir static/media
+    - mkdir static/media/avatars
+    - python manage.py makemigrations
+    - python manage.py migrate
+  script:
+    - coverage run --source='.' manage.py test
+  after_script:
+    - coverage xml
+    - mkdir coverage-reports
+    - cp ./coverage.xml ./coverage-reports/coverage.xml
+    - SUFFIX=$RANDOM
+    - curl "http://10.0.0.11/sonar-scanner.tar.gz" -s -o "/tmp/sonar-$SUFFIX.tar.gz"
+    - tar -xf "/tmp/sonar-$SUFFIX.tar.gz"  -C /opt
+    - /opt/sonar-scanner/bin/sonar-scanner
+    

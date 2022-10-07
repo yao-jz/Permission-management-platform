@@ -1,0 +1,28 @@
+__pycache__
+.vscode
+.idea
+*.sqlite3
+migrations
+.pytest_cache
+node_modules
+CHANGELOG.md
+backend/settings.py
+*.xml
+.coverage
+htmlcov
+venv
+media
+static
+
+# 可以建立自己的本地测试文件夹
+local_test
+
+# 本地的待办事项提醒
+todo.txt
+
+# 提交之前本地运行ci
+ci.bat
+ci.sh
+
+# 本地测试文件编码格式
+test_encode.py
